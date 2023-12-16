@@ -39,7 +39,7 @@ import com.android.systemui.dock.DockManager;
 import com.android.systemui.dock.DockManagerImpl;
 import com.android.systemui.doze.DozeHost;
 import com.android.systemui.dump.DumpManager;
-import com.android.systemui.lineage.LineageModule;
+import com.android.systemui.superior.SuperiorOSModule;
 import com.android.systemui.media.dagger.MediaModule;
 import com.android.systemui.navigationbar.gestural.GestureModule;
 import com.android.systemui.plugins.BcSmartspaceDataPlugin;
@@ -52,8 +52,6 @@ import com.android.systemui.recents.Recents;
 import com.android.systemui.recents.RecentsImplementation;
 import com.android.systemui.screenshot.ReferenceScreenshotModule;
 import com.android.systemui.shade.NotificationShadeWindowControllerImpl;
-import com.android.systemui.shade.ShadeController;
-import com.android.systemui.shade.ShadeControllerImpl;
 import com.android.systemui.shade.ShadeExpansionStateManager;
 import com.android.systemui.settings.UserContentResolverProvider;
 import com.android.systemui.statusbar.CommandQueue;
@@ -127,7 +125,7 @@ import dagger.Lazy;
         StatusBarEventsModule.class,
         SystemUIGooglePolicyModule.class,
         RotationLockModule.class,
-        LineageModule.class
+        SuperiorOSModule.class
 })
 public abstract class SystemUIGoogleModule {
 
@@ -160,9 +158,6 @@ public abstract class SystemUIGoogleModule {
         spC.init();
         return spC;
     }
-
-    @Binds
-    abstract ShadeController provideShadeController(ShadeControllerImpl shadeController);
 
     @SysUISingleton
     @Provides
