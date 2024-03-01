@@ -1,7 +1,5 @@
 PRODUCT_PACKAGES += \
-    SystemUIGoogle \
-    SettingsGoogle
+    SystemUIGoogle
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUIGoogle \
-    SettingsGoogle
+    SystemUIGoogle
